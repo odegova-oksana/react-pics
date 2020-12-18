@@ -5,9 +5,11 @@ class SearchBar extends React.Component {
     term: 'Hi there!',
   };
 
-  onFormSubmit (event) {
-    event.preventDefault();
-  }
+  // => set up this value for the function (instead of onFormSubmit(event){})
+  onFormSubmit = event => {
+    event.preventDefault ();
+    console.log (this.state.term);
+  };
 
   render () {
     // {this.onInputChange} without () for function to be called only on change, not every render event
